@@ -1,46 +1,11 @@
-const storage = getStorageExample();
+function getStorage(type) {
+    const storageList = {
+        ram: getRamStorage(),
+        local: null,
+        firebase: null,
+        http: null,
+    };
 
-function list() {
-    return storage;
+    return storageList[type];
+
 }
-
-function add(cake) {
-    storage.push(cake);
-}
-
-function one(id) {
-    let index = storage.findIndex(function (cake) {
-        if (id === cake.id) {
-            return true;
-        } else {
-            return false;
-        }
-    });
-    return storage[index];
-}
-
-function edit(id, cake) {
-    let index = storage.findIndex(function (cake) {
-        if (id === cake.id) {
-            return true;
-        } else {
-            return false;
-        }
-    });
-    storage[index] = cake;
-}
-
-function del(id) {
-    let index = storage.findIndex(function (cake) {
-        if (id === cake.id) {
-            return true;
-        } else {
-            return false;
-        }
-    });
-    storage.splice(index, 1);
-}
-
-
-
-

@@ -5,8 +5,25 @@
   <title>Cheesecake</title>
 </head>
 <body>
+<form>
+  <label for="name">Name</label>
+  <input type="text" id="name"><br>
+  <label for="image">Image</label>
+  <input type="text" id="image"><br>
+
+  <label for="weight">Weight</label>
+  <input type="number" id="weight"><br>
+  <label for="cost">Cost</label>
+  <input type="number" id="cost"><br>
+  <label for="price">Price</label>
+  <input type="number" id="price"><br>
+  <input type="reset"><br>
+  <input type="button" value="Сохранить"  onClick="addCake()">
+  
+</form>
 <a href="/cheese/add">to add</a>
-<script src="storage.example.js"></script>
+<script src="ram-storage.js"></script>
 <script src="storage.js"></script>
+<script src="main-controller.js"></script>
 </body>
 </html>
